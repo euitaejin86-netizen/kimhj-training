@@ -97,9 +97,12 @@ h2{font-size:clamp(25px,3.6vw,38px);line-height:1.34;letter-spacing:-.032em;font
 .spcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
   padding:30px;box-shadow:var(--sh-lg);position:sticky;top:92px}
 @media(max-width:900px){.spcard{position:static}}
-.avatar{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;
+.avatar{position:relative;width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;
+  display:grid;place-items:center;margin-bottom:20px;
   background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
-  font-size:30px;font-weight:900;letter-spacing:-.03em;margin-bottom:18px}
+  font-size:52px;font-weight:900;letter-spacing:-.03em}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.photo-cap{font-size:11.5px;color:var(--ink-3);margin:-12px 0 16px;text-align:center}
 .spname{font-size:24px;font-weight:900;letter-spacing:-.03em}
 .sprole{color:var(--ink-3);font-size:14px;margin-top:2px}
 .taglist{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
@@ -341,7 +344,7 @@ footer b{color:#fff;font-weight:700}
   <div class="wrap">
     <div class="speaker">
       <aside class="spcard">
-        <div class="avatar">金</div>
+        <div class="avatar">金<img src="kimhj.jpg" alt="김현정 박사" onerror="this.remove()"></div>
         <div class="spname">김현정 <span style="font-size:15px;color:var(--ink-3);font-weight:700">박사</span></div>
         <div class="sprole">(사)중소벤처기업코칭컨설팅협회 부회장<br>Executive Coach Society 설립자·대표</div>
         <div class="taglist">
