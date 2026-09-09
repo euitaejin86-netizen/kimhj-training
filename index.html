@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김현정 대표 기업현장맞춤연수 | 중소벤처기업연수원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1729; --ink-2:#33405c; --ink-3:#6a7691;
+  --bg:#ffffff; --bg-2:#f6f8fc; --bg-3:#eef2fa;
+  --line:#e3e9f4;
+  --brand:#3b4fe4; --brand-2:#6d5ef7; --brand-soft:#eef0ff;
+  --mint:#0fb8a6; --mint-soft:#e5faf6;
+  --amber:#f59e0b; --amber-soft:#fff5e2;
+  --r:14px; --r-lg:22px;
+  --sh:0 1px 2px rgba(15,23,41,.04), 0 8px 24px rgba(15,23,41,.06);
+  --sh-lg:0 2px 4px rgba(15,23,41,.04), 0 20px 50px rgba(15,23,41,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans KR",-apple-system,"Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.narrow{max-width:860px;margin:0 auto}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.brand{font-weight:900;font-size:16px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.brand i{width:26px;height:26px;border-radius:8px;display:inline-block;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+.navlinks{display:flex;gap:24px;margin-left:auto;font-size:14.5px;color:var(--ink-2);font-weight:500}
+.navlinks a:hover{color:var(--brand)}
+@media(max-width:880px){.navlinks{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;
+  border:1px solid transparent;cursor:pointer;transition:.18s;font-family:inherit}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(59,79,228,.28)}
+.btn-primary:hover{background:#2f41cf;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--sh)}
+.btn-ghost:hover{border-color:#c9d3e8}
+.btn-sm{padding:10px 20px;font-size:14px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:88px 0 76px;
+  background:radial-gradient(1100px 480px at 50% -12%,#e8ecff 0%,#f4f7fd 42%,#fff 78%)}
+.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--line)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);box-shadow:var(--sh);
+  font-size:13.5px;font-weight:700;color:var(--brand)}
+.pill b{color:var(--ink)}
+h1{font-size:clamp(32px,5.2vw,54px);line-height:1.28;letter-spacing:-.035em;
+  font-weight:900;margin:26px 0 0}
+h1 .hl{background:linear-gradient(180deg,transparent 62%,#d9e0ff 62%);padding:0 3px}
+.lead{font-size:clamp(16px,2vw,18.5px);color:var(--ink-2);margin:22px auto 0;max-width:660px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.hero-note{margin-top:14px;font-size:13.5px;color:var(--ink-3)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 18px;text-align:center;box-shadow:var(--sh)}
+.stat .n{font-size:26px;font-weight:900;letter-spacing:-.03em;color:var(--brand)}
+.stat .n small{font-size:14px;font-weight:700}
+.stat .l{font-size:13px;color:var(--ink-3);margin-top:4px;line-height:1.5}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.sec-alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:800;color:var(--brand);letter-spacing:.08em;text-transform:uppercase}
+h2{font-size:clamp(25px,3.6vw,38px);line-height:1.34;letter-spacing:-.032em;font-weight:900;margin:10px 0 0}
+.sub{color:var(--ink-2);margin-top:14px;font-size:16.5px}
+.center{text-align:center}
+.center .sub{max-width:620px;margin-left:auto;margin-right:auto}
+
+/* ---------- why cards ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--sh)}
+.ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+.ico.a{background:var(--brand-soft)}.ico.b{background:var(--mint-soft)}.ico.c{background:var(--amber-soft)}
+.card h3{margin:0 0 8px;font-size:19px;letter-spacing:-.02em}
+.card p{margin:0;color:var(--ink-2);font-size:15px}
+
+/* ---------- speaker ---------- */
+.speaker{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start}
+@media(max-width:900px){.speaker{grid-template-columns:1fr;gap:30px}}
+.spcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px;box-shadow:var(--sh-lg);position:sticky;top:92px}
+@media(max-width:900px){.spcard{position:static}}
+.avatar{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+  font-size:30px;font-weight:900;letter-spacing:-.03em;margin-bottom:18px}
+.spname{font-size:24px;font-weight:900;letter-spacing:-.03em}
+.sprole{color:var(--ink-3);font-size:14px;margin-top:2px}
+.taglist{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tag{font-size:12.5px;padding:5px 11px;border-radius:999px;background:var(--bg-3);color:var(--ink-2);font-weight:600}
+.deflist{margin:22px 0 0;padding:22px 0 0;border-top:1px solid var(--line);font-size:14px}
+.deflist div{display:flex;gap:12px;padding:5px 0}
+.deflist dt{width:46px;flex:none;color:var(--ink-3);font-weight:700}
+.deflist dd{margin:0;color:var(--ink-2)}
+.blockquote{border-left:3px solid var(--brand);background:var(--brand-soft);
+  padding:20px 24px;border-radius:0 var(--r) var(--r) 0;margin:0 0 30px;
+  font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.7}
+.blockquote cite{display:block;font-style:normal;font-weight:500;font-size:13.5px;color:var(--ink-3);margin-top:8px}
+.hist{list-style:none;padding:0;margin:24px 0 0;border-left:2px solid var(--line)}
+.hist li{position:relative;padding:0 0 20px 26px;font-size:14.5px;color:var(--ink-2)}
+.hist li:before{content:"";position:absolute;left:-6px;top:9px;width:10px;height:10px;
+  border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.hist b{color:var(--ink);display:block;font-size:15px}
+.hist span{color:var(--ink-3);font-size:13px}
+.books{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+@media(max-width:620px){.books{grid-template-columns:1fr}}
+.book{border:1px solid var(--line);border-radius:12px;padding:13px 16px;background:#fff;font-size:14px}
+.book em{font-style:normal;color:var(--ink-3);font-size:12px;display:block}
+
+/* ---------- topics ---------- */
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:980px){.topics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:660px){.topics{grid-template-columns:1fr}}
+.topic{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;box-shadow:var(--sh);cursor:pointer;transition:.2s;
+  display:flex;flex-direction:column;text-align:left;font-family:inherit;width:100%}
+.topic:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:#c9d3ff}
+.topic .num{font-size:12px;font-weight:900;color:var(--brand);letter-spacing:.1em}
+.topic h3{font-size:20px;line-height:1.42;letter-spacing:-.028em;margin:10px 0 10px;font-weight:900}
+.topic .hook{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;flex:1}
+.topic .meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--bg-3);color:var(--ink-2)}
+.chip.hot{background:var(--amber-soft);color:#a35d00}
+.topic .more{font-size:14px;font-weight:800;color:var(--brand);display:flex;align-items:center;gap:6px}
+.topic:hover .more{gap:10px}
+
+/* ---------- calculator ---------- */
+.calc{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--sh-lg);overflow:hidden;margin-top:40px}
+.calc-body{display:grid;grid-template-columns:1.15fr .85fr}
+@media(max-width:860px){.calc-body{grid-template-columns:1fr}}
+.calc-in{padding:34px}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:13.5px;font-weight:800;color:var(--ink-2);margin-bottom:9px}
+select,input[type=number]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:15px;color:var(--ink);background:#fff;appearance:none}
+select:focus,input:focus{outline:2px solid var(--brand);outline-offset:1px;border-color:transparent}
+select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path d='M4 6l4 4 4-4' stroke='%236a7691' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center}
+.segs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg{padding:14px 8px;border:1px solid var(--line);border-radius:12px;background:#fff;
+  cursor:pointer;text-align:center;font-family:inherit;transition:.15s}
+.seg b{display:block;font-size:17px;font-weight:900;letter-spacing:-.02em}
+.seg span{font-size:12px;color:var(--ink-3)}
+.seg[aria-pressed=true]{border-color:var(--brand);background:var(--brand-soft);box-shadow:0 0 0 3px rgba(59,79,228,.1)}
+.seg[aria-pressed=true] b{color:var(--brand)}
+.calc-out{padding:34px;background:linear-gradient(160deg,#101a3a,#1c2a5e);color:#fff}
+.calc-out .lbl{font-size:12.5px;color:#93a2ce;font-weight:700;letter-spacing:.04em}
+.calc-out .big{font-size:clamp(30px,5vw,42px);font-weight:900;letter-spacing:-.04em;line-height:1.2;margin:6px 0 2px}
+.calc-out .big small{font-size:18px;font-weight:700}
+.calc-out .per{color:#b9c5e8;font-size:14px}
+.calc-line{display:flex;justify-content:space-between;padding:11px 0;
+  border-top:1px solid rgba(255,255,255,.14);font-size:14.5px;color:#cdd7f2}
+.calc-line b{color:#fff;font-weight:700}
+.calc-line.strike b{color:#93a2ce;text-decoration:line-through}
+.calc-line.save b{color:#5eead4}
+.calc-course{margin-top:20px;padding:14px 16px;background:rgba(255,255,255,.07);
+  border-radius:12px;font-size:12.5px;color:#b9c5e8;line-height:1.65}
+.calc-course b{color:#fff;display:block;font-size:14px;margin-top:2px}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;box-shadow:var(--sh);position:relative}
+.step .n{width:30px;height:30px;border-radius:9px;background:var(--brand);color:#fff;
+  display:grid;place-items:center;font-weight:900;font-size:14px;margin-bottom:14px}
+.step h4{margin:0 0 6px;font-size:16px;letter-spacing:-.02em}
+.step p{margin:0;font-size:13.5px;color:var(--ink-3)}
+.step .who{margin-top:10px;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:999px;display:inline-block}
+.who.us{background:var(--mint-soft);color:#07806f}
+.who.you{background:var(--amber-soft);color:#a35d00}
+
+/* ---------- table ---------- */
+details.acc{border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-top:32px;box-shadow:var(--sh)}
+details.acc>summary{cursor:pointer;padding:20px 24px;font-weight:800;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary:after{content:"+";font-size:20px;color:var(--ink-3);font-weight:400}
+details.acc[open]>summary:after{content:"−"}
+.tablebox{overflow-x:auto;border-top:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--bg-2);font-size:12.5px;color:var(--ink-3);font-weight:800;letter-spacing:.02em}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.hi{color:var(--brand);font-weight:800}
+tbody tr:hover{background:var(--bg-2)}
+
+/* ---------- faq ---------- */
+.faq{margin-top:40px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:22px 40px 22px 0;font-weight:700;font-size:16.5px;
+  letter-spacing:-.02em;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:6px;top:20px;font-size:22px;color:var(--ink-3);font-weight:400}
+.faq details[open] summary:after{content:"−"}
+.faq p{margin:0 0 22px;color:var(--ink-2);font-size:15px;padding-right:40px}
+
+/* ---------- final cta ---------- */
+.final{background:linear-gradient(150deg,#101a3a,#252f6e 55%,#3b2f7a);color:#fff;text-align:center;padding:100px 0}
+.final h2{color:#fff}
+.final .sub{color:#c3cdeb}
+.final .btn-primary{background:#fff;color:var(--brand);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.final .btn-primary:hover{background:#eef0ff}
+.final .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.34);box-shadow:none}
+.final .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+
+footer{background:#0b1226;color:#8e9cc4;font-size:13.5px;padding:40px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff;font-weight:700}
+
+/* ---------- modal ---------- */
+.overlay{position:fixed;inset:0;background:rgba(10,16,34,.55);backdrop-filter:blur(4px);
+  z-index:100;display:flex;align-items:flex-start;justify-content:center;padding:5vh 16px;overflow-y:auto}
+.overlay[hidden]{display:none}
+.modal{background:#fff;border-radius:var(--r-lg);max-width:780px;width:100%;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden;animation:pop .22s ease}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985)}}
+.m-head{padding:32px 34px 26px;background:linear-gradient(160deg,#f2f5ff,#fff);border-bottom:1px solid var(--line);position:relative}
+.m-close{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;cursor:pointer;font-size:17px;color:var(--ink-3);line-height:1}
+.m-close:hover{background:var(--bg-2)}
+.m-head .num{font-size:12px;font-weight:900;color:var(--brand);letter-spacing:.1em}
+.m-head h3{margin:8px 40px 10px 0;font-size:clamp(21px,3.4vw,27px);letter-spacing:-.032em;line-height:1.36;font-weight:900}
+.m-head p{margin:0;color:var(--ink-2);font-size:15px}
+.m-body{padding:28px 34px 34px}
+.m-sec{font-size:12.5px;font-weight:900;color:var(--ink-3);letter-spacing:.08em;margin:0 0 12px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.mods{list-style:none;padding:0;margin:0 0 26px}
+.mods li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.mods li:last-child{border-bottom:0}
+.mods .t{flex:none;width:52px;font-size:12.5px;font-weight:900;color:var(--brand);
+  font-variant-numeric:tabular-nums;padding-top:2px}
+.mods .c b{display:block;font-size:15.5px;letter-spacing:-.02em;margin-bottom:3px}
+.mods .c span{font-size:14px;color:var(--ink-2)}
+.mods li.off{opacity:.34}
+.mods li.off .t{color:var(--ink-3)}
+.outcome{background:var(--mint-soft);border-radius:var(--r);padding:20px 24px;margin-bottom:22px}
+.outcome b{display:block;font-size:13px;color:#07806f;font-weight:900;letter-spacing:.05em;margin-bottom:8px}
+.outcome ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
+.outcome li{margin:5px 0}
+.m-price{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;margin-bottom:20px}
+.m-price .l{font-size:12.5px;color:var(--ink-3);font-weight:700}
+.m-price .v{font-size:24px;font-weight:900;letter-spacing:-.03em;color:var(--brand)}
+.m-price .v small{font-size:14px;color:var(--ink-3);font-weight:600;text-decoration:line-through;margin-left:8px}
+.m-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin:0 0 22px;
+  padding:13px 16px;background:var(--bg-2);border-radius:10px}
+.m-note b{color:var(--ink-2)}
+.m-cta{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:560px){.m-head,.m-body{padding-left:22px;padding-right:22px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><i></i>중소벤처기업연수원 <span style="color:var(--ink-3);font-weight:500">기업현장맞춤연수</span></div>
+    <div class="navlinks">
+      <a href="#speaker">강사 소개</a>
+      <a href="#topics">추천 주제</a>
+      <a href="#calc">연수비 계산</a>
+      <a href="#process">신청 절차</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="#apply" style="margin-left:12px">신청하기</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap center">
+    <span class="pill">🎓 <b>CEO명품아카데미 수료 대표님</b> 전용 안내</span>
+    <h1>그날 강의실에서 메모하셨던 그 이야기,<br>이번엔 <span class="hl">대표님 회사 회의실</span>에서.</h1>
+    <p class="lead">
+      CEO명품아카데미 「위기경영」의 <b>김현정 박사</b>가 직접 회사로 찾아갑니다.
+      대표님 혼자 알고 계신 이야기를 임원·팀장·전 직원이 같은 언어로 이해하는 데까지,
+      <b>2시간이면 충분</b>합니다. 인재키움 프리미엄 훈련으로 <b>연수비의 95%가 환급</b>됩니다.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://naver.me/Fae5AOpg" target="_blank" rel="noopener">신청폼 작성하기 →</a>
+      <a class="btn btn-ghost" href="#topics">추천 주제 5가지 보기</a>
+    </div>
+    <p class="hero-note">신청폼 작성 후 담당자가 2영업일 내 연락드립니다 · 협의 단계까지 비용 없음</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">95<small>%</small></div><div class="l">찾아가는 훈련<br>연수비 환급률</div></div>
+      <div class="stat"><div class="n">4,000<small>원</small></div><div class="l">1인당 실부담금<br>(2시간 과정 기준)</div></div>
+      <div class="stat"><div class="n">2~4<small>시간</small></div><div class="l">1일 완성형<br>업무 공백 최소화</div></div>
+      <div class="stat"><div class="n">0<small>건</small></div><div class="l">기업이 처리할<br>HRD-Net 행정</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WHY ============ -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Why now</span>
+      <h2>대표님만 알고 계신 이야기는,<br>조직을 바꾸지 못합니다.</h2>
+      <p class="sub">CEO명품아카데미에서 얻으신 통찰이 회의실 문턱을 넘지 못하는 이유는 세 가지입니다.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico a">🗣️</div>
+        <h3>언어가 공유되지 않습니다</h3>
+        <p>대표님은 '심리적 안전감'을 말하는데 팀장은 '분위기 좋게 하라'로 듣습니다. 같은 강의를 같이 들어야 같은 단어가 같은 뜻이 됩니다.</p>
+      </div>
+      <div class="card">
+        <div class="ico b">⏱️</div>
+        <h3>직원 교육은 늘 뒤로 밀립니다</h3>
+        <p>일정·비용·장소가 걸림돌입니다. 찾아가는 훈련은 회사 회의실에서 2~4시간, 1인 4,000원부터 시작합니다.</p>
+      </div>
+      <div class="card">
+        <div class="ico c">📋</div>
+        <h3>환급 행정이 복잡해 보입니다</h3>
+        <p>고용24 가입과 계좌 등록만 하시면 됩니다. 회차 등록·시간표·실시신고·수료보고·환급 대행신청은 연수원이 전부 처리합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKER ============ -->
+<section class="sec-alt" id="speaker">
+  <div class="wrap">
+    <div class="speaker">
+      <aside class="spcard">
+        <div class="avatar">金</div>
+        <div class="spname">김현정 <span style="font-size:15px;color:var(--ink-3);font-weight:700">박사</span></div>
+        <div class="sprole">(사)중소벤처기업코칭컨설팅협회 부회장<br>Executive Coach Society 설립자·대표</div>
+        <div class="taglist">
+          <span class="tag">이그제큐티브 코칭</span>
+          <span class="tag">위기경영</span>
+          <span class="tag">심리적 안전감</span>
+          <span class="tag">MI 코칭 대화법</span>
+          <span class="tag">가족기업·승계</span>
+          <span class="tag">블루오션 전략</span>
+        </div>
+        <dl class="deflist">
+          <div><dt>박사</dt><dd>콜럼비아대학교 조직·리더십</dd></div>
+          <div><dt>석사</dt><dd>미네소타대학교 상담심리학</dd></div>
+          <div><dt>연구</dt><dd>프랑스 INSEAD 글로벌 리더십센터 연구원</dd></div>
+          <div><dt>실무</dt><dd>삼성전자 리더십개발센터</dd></div>
+          <div><dt>현직</dt><dd>aSSIST 글로벌 리더십센터장 · 숭실대 중소기업대학원 겸임교수 · 김현정 아카데미 대표</dd></div>
+          <div><dt>경력</dt><dd>기업 코칭·컨설팅·교육 26년</dd></div>
+        </dl>
+      </aside>
+
+      <div>
+        <span class="eyebrow">Instructor</span>
+        <h2 style="margin-bottom:26px">대표님이 이미 검증하신 강사입니다.</h2>
+        <blockquote class="blockquote">
+          “부하직원의 행동개선보다 더 필요한 것은 관계개선입니다.”
+          <cite>— CEO명품아카데미 7강 「위기경영」 중</cite>
+        </blockquote>
+        <p style="color:var(--ink-2);margin:0 0 6px">
+          김현정 박사는 정신분석·상담심리 기반의 리더십 코칭을 국내에 정착시킨 이그제큐티브 코치입니다.
+          맨프레드 케츠 드 브리스가 이끄는 <b>Ketz de Vries Institute</b> 글로벌 얼라이언스로 공동 연구를 수행했고,
+          김위찬·르네 마보안의 <b>『블루오션 전략 확장판』</b>을 우리말로 옮겼습니다.
+          이론이 아니라 <b>보잉 스타라이너·스페이스X·볼티모어 교량 붕괴</b> 같은 실제 사건 데이터로 논증하는 강의가 특징입니다.
+        </p>
+
+        <div class="books">
+          <div class="book"><em>저서</em>이그제큐티브 코칭의 이론과 실제</div>
+          <div class="book"><em>저서</em>최고의 팀을 만드는 심리적 안전감</div>
+          <div class="book"><em>역서</em>블루오션 전략 확장판 (김위찬·르네 마보안)</div>
+          <div class="book"><em>역서</em>나르시시스트 리더를 만났다면 (케츠 드 브리스)</div>
+        </div>
+
+        <p class="m-sec" style="margin:34px 0 0">주요 강의·특강 이력</p>
+        <ul class="hist">
+          <li><b>CEO명품아카데미 7강 「위기경영」</b><span>중소벤처기업연수원 · 대표님께서 수강하신 그 강의</span></li>
+          <li><b>제8회 Executive Coaching Forum</b><span>2025.11 · 앰배서더 풀만 호텔 · ECS·ICCS 공동주관 (2017년부터 매년 개최)</span></li>
+          <li><b>블루오션 전략 워크숍 (7시간)</b><span>2025.10 · 「혼란한 시절 새로운 기회를 여는 전략적 사고」 역자 직강</span></li>
+          <li><b>MI 코칭대화법 과정 (CCCS 자격 인증)</b><span>2025.10~ · 인간 변화를 가능하게 하는 검증된 대화법</span></li>
+          <li><b>ICCS 수요특강 시리즈</b><span>2026년 주제 「가족기업의 승계와 성장 돕기」 연속 강연</span></li>
+          <li><b>한국강사협회 초청 세미나</b><span>2023.09 · 「실질적인 변화를 불러일으키는 심리적 매커니즘과 코칭 대화법(MI)」</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOPICS ============ -->
+<section id="topics">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Programs</span>
+      <h2>대표님 회사에 바로 들일 수 있는 5가지</h2>
+      <p class="sub">각 주제는 2시간·3시간·4시간 중에서 고르실 수 있습니다. 카드를 누르면 시간별 상세 커리큘럼이 열립니다.</p>
+    </div>
+    <div class="topics" id="topicGrid"></div>
+    <p class="center" style="color:var(--ink-3);font-size:13.5px;margin-top:28px">
+      원하시는 주제가 없으신가요? HRD진단을 거쳐 회사 상황에 맞춘 조합도 설계해 드립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="sec-alt" id="calc">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Cost</span>
+      <h2>얼마 드는지, 지금 바로 확인해 보세요</h2>
+      <p class="sub">인재키움 프리미엄 훈련 찾아가는 훈련 기준입니다. 연수비의 95%가 사업주 계좌로 환급됩니다.</p>
+    </div>
+
+    <div class="calc narrow">
+      <div class="calc-body">
+        <div class="calc-in">
+          <div class="field">
+            <label for="cTopic">1. 주제 선택</label>
+            <select id="cTopic"></select>
+          </div>
+          <div class="field">
+            <label>2. 교육 시간</label>
+            <div class="segs" id="cHours">
+              <button class="seg" type="button" data-h="2" aria-pressed="false"><b>2시간</b><span>핵심 압축</span></button>
+              <button class="seg" type="button" data-h="3" aria-pressed="true"><b>3시간</b><span>표준</span></button>
+              <button class="seg" type="button" data-h="4" aria-pressed="false"><b>4시간</b><span>실습 포함</span></button>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:0">
+            <label for="cPeople">3. 참여 인원 (명)</label>
+            <input type="number" id="cPeople" value="20" min="1" max="500" step="1">
+          </div>
+        </div>
+
+        <div class="calc-out">
+          <div class="lbl">우리 회사 실부담금</div>
+          <div class="big" id="oNet">160,000<small>원</small></div>
+          <div class="per" id="oPer">1인당 6,000원 · 20명 기준</div>
+          <div style="margin-top:22px">
+            <div class="calc-line strike"><span>연수비 총액</span><b id="oGross">2,400,000원</b></div>
+            <div class="calc-line save"><span>정부 환급액 (95%)</span><b id="oRefund">− 2,280,000원</b></div>
+          </div>
+          <div class="calc-course">
+            환급 등록 과정명
+            <b id="oCourse">전략적 사고 기반 리더십 실행 설계 (3시간)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="center" style="color:var(--ink-3);font-size:13px;margin-top:20px;max-width:700px;margin-left:auto;margin-right:auto">
+      환급은 고용·산재보험 우선지원대상기업(중소기업)에 해당하고, 훈련생 소속 사업장과 교육 장소가 인근지역 요건을 충족할 때 적용됩니다.
+      기업당 지원한도는 개산보험료의 240%(최소 500만원 보장)입니다. 실제 환급액은 공단 심사 결과에 따라 달라질 수 있습니다.
+    </p>
+
+    <details class="acc narrow">
+      <summary>연수원이 승인받은 18개 과정 전체 보기</summary>
+      <div class="tablebox">
+        <table>
+          <thead><tr><th>분야</th><th>과정명</th><th>시간</th><th class="num">연수비</th><th class="num">1인 실부담</th></tr></thead>
+          <tbody id="allCourses"></tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Process</span>
+      <h2>대표님이 하실 일은 사실상 2단계입니다</h2>
+      <p class="sub">나머지 HRD-Net 행정은 전부 연수원이 대행합니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>신청폼 작성</h4><p>회사명·연락처·관심 주제만 입력하시면 됩니다. 3분이면 끝납니다.</p><span class="who you">기업</span></div>
+      <div class="step"><div class="n">2</div><h4>날짜·주제·장소 협의</h4><p>담당자가 연락드려 인원, 시간(2~4h), 방문 일자와 장소를 확정합니다.</p><span class="who you">기업 · 연수원</span></div>
+      <div class="step"><div class="n">3</div><h4>환급 행정 준비</h4><p>고용24 기업회원 가입과 사업주 명의 계좌 등록. 실시신고는 연수원이 처리합니다.</p><span class="who you">기업</span></div>
+      <div class="step"><div class="n">4</div><h4>연수 진행</h4><p>김현정 박사가 회사로 방문해 교육을 진행합니다. 출석 관리도 연수원 담당입니다.</p><span class="who us">연수원</span></div>
+      <div class="step"><div class="n">5</div><h4>환급 신청</h4><p>수료 후 1주일 내 연수원이 대행 신청, 연수비 95%가 사업주 계좌로 입금됩니다.</p><span class="who us">연수원</span></div>
+    </div>
+
+    <div class="card narrow" style="margin-top:32px;background:var(--brand-soft);border-color:#cdd4ff">
+      <h3 style="margin-bottom:8px">💡 미리 준비해두시면 좋은 두 가지</h3>
+      <p style="color:var(--ink-2)">
+        ① <b>고용24(work24) 기업회원 가입</b> ② <b>사업주(법인·개인사업자) 명의 계좌 등록</b>.
+        환급금은 개인 계좌로는 지급되지 않습니다. 이 두 가지만 교육 시작 전에 마쳐두시면 수료 후 환급이 지연되지 않습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-alt" id="faq">
+  <div class="wrap narrow">
+    <div class="center">
+      <span class="eyebrow">FAQ</span>
+      <h2>자주 묻는 질문</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>우리 회사가 환급 대상인지 어떻게 확인하나요?</summary>
+        <p>고용·산재보험 토탈서비스(total.comwel.or.kr)에 접속해 정보조회 → 보험가입정보 조회 → 사업장 총괄카드 조회로 들어가신 뒤, 사업장관리번호를 입력하시면 됩니다. '대규모기업' 항목이 "비해당"으로 나오면 우선지원대상기업이므로 참여 가능합니다. 확인이 번거로우시면 신청폼에 사업장관리번호를 남겨주시면 연수원이 대신 확인해 드립니다.</p></details>
+      <details><summary>최소 몇 명부터 신청할 수 있나요?</summary>
+        <p>인원 제한을 두지 않지만, 토의와 실습이 들어가는 3~4시간 과정은 10명 이상일 때 효과가 가장 좋습니다. 임원·팀장만 모아 소수 정예로 진행하는 것도 가능합니다. 인원 규모는 협의 단계에서 확정합니다.</p></details>
+      <details><summary>홍보 주제명과 환급 등록 과정명이 다른데 괜찮은가요?</summary>
+        <p>네. 위 5가지 주제는 강의 내용 기준의 명칭이고, 환급 신청은 연수원이 한국산업인력공단에서 이미 승인받은 18개 과정 중 시간과 내용이 맞는 과정명으로 등록합니다. 신규 과정 승인 절차가 없어 일정을 빠르게 잡을 수 있는 것이 오히려 장점입니다. 등록 과정명은 협의 단계에서 안내드립니다.</p></details>
+      <details><summary>지방에 있는데 방문이 가능한가요?</summary>
+        <p>찾아가는 훈련은 훈련생 소속 사업장과 교육 장소가 인근지역(특별시·광역시는 군·구, 도는 시·군 단위)에 있어야 등록할 수 있습니다. 요건에서 벗어나는 경우 연수원 집합훈련 방식으로 안내드립니다. 비수도권 기업에는 오히려 우대 조건이 적용됩니다.</p></details>
+      <details><summary>대표님도 함께 들을 수 있나요?</summary>
+        <p>교육 참여는 자유롭게 하실 수 있습니다. 다만 환급 대상은 고용보험 피보험자인 재직 근로자이므로, 대표이사가 피보험자가 아닌 경우 환급 인원에서는 제외됩니다. 특히 가족기업 승계 주제는 오너와 후계자가 함께 듣는 것을 권해 드립니다.</p></details>
+      <details><summary>같은 회사가 여러 주제를 이어서 들을 수 있나요?</summary>
+        <p>가능합니다. 기업당 지원한도는 개산보험료의 240%(최소 500만원 보장)이므로, 한도 안에서 분기별로 주제를 바꿔가며 시리즈로 운영하는 기업이 많습니다. 예를 들어 1분기 위기경영, 2분기 심리적 안전감처럼 이어가는 설계도 함께 잡아 드립니다.</p></details>
+      <details><summary>비용을 먼저 내야 하나요?</summary>
+        <p>기업이 연수비 전액을 먼저 납부하고, 수료 후 95%가 사업주 계좌로 환급되는 구조입니다. 20명 3시간 과정이라면 240만원을 납부하고 228만원을 돌려받아 실부담은 12만원입니다. 환급 대행신청은 수료 후 1주일 이내에 연수원이 처리합니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="apply">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#9db0ff">Apply</span>
+    <h2>1인당 4,000원.<br>대표님 회사의 언어를 바꾸는 값입니다.</h2>
+    <p class="sub" style="max-width:600px;margin:16px auto 0">
+      신청폼 작성에 3분이면 충분합니다. 담당자가 2영업일 내 연락드려 날짜와 주제를 함께 정합니다.
+      협의 단계까지는 어떤 비용도 발생하지 않습니다.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://naver.me/Fae5AOpg" target="_blank" rel="noopener" id="formLink">신청폼 작성하기 →</a>
+      <a class="btn btn-ghost" href="#topics">주제 다시 보기</a>
+    </div>
+    <p style="color:#93a2ce;font-size:13px;margin-top:18px">※ 네이버폼으로 연결됩니다 · 작성 소요 약 3분</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>중소벤처기업연수원</b> · 기업현장맞춤연수 / 인재키움 프리미엄 훈련<br>
+      사업 운영: 한국산업인력공단 2026년 중소기업 인재 키움 프리미엄 훈련</div>
+    <div>강사 <b>김현정</b> (사)중소벤처기업코칭컨설팅협회 부회장<br>
+      Executive Coach Society www.ecscoach.org</div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="m-head">
+      <button class="m-close" id="mClose" aria-label="닫기">✕</button>
+      <div class="num" id="mNum"></div>
+      <h3 id="mTitle"></h3>
+      <p id="mHook"></p>
+    </div>
+    <div class="m-body">
+      <p class="m-sec">교육 시간 선택</p>
+      <div class="tabs" id="mTabs">
+        <button class="seg" type="button" data-h="2" aria-pressed="false"><b>2시간</b><span>4,000원 / 인</span></button>
+        <button class="seg" type="button" data-h="3" aria-pressed="true"><b>3시간</b><span>6,000원 / 인</span></button>
+        <button class="seg" type="button" data-h="4" aria-pressed="false"><b>4시간</b><span>8,000원 / 인</span></button>
+      </div>
+
+      <div class="m-price">
+        <div><div class="l">1인당 실부담금 (95% 환급 후)</div>
+          <div class="v" id="mNet">6,000원 <small id="mGross">120,000원</small></div></div>
+        <div style="text-align:right"><div class="l">환급 등록 과정명</div>
+          <div style="font-weight:700;font-size:14.5px" id="mCourse"></div></div>
+      </div>
+
+      <p class="m-sec">상세 커리큘럼</p>
+      <ul class="mods" id="mMods"></ul>
+
+      <div class="outcome"><b>이 과정을 마치면</b><ul id="mOut"></ul></div>
+
+      <p class="m-note" id="mWho"></p>
+
+      <div class="m-cta">
+        <a class="btn btn-primary" href="https://naver.me/Fae5AOpg" target="_blank" rel="noopener" id="mApply">이 주제로 신청하기 →</a>
+        <button class="btn btn-ghost" type="button" id="mClose2">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- 승인 18개 과정 (연수비 = 40,000원/시간, 실부담 5%) ---------- */
+const COURSES = [
+  ["AI 활용","2시간으로 끝내는 AI 마인드셋",2],
+  ["AI 활용","3시간으로 끝내는 AI 프롬프트 작성",3],
+  ["AI 활용","4시간으로 끝내는 AI 워크플로우 설계",4],
+  ["소통·리더십","갈등 상황 대응과 설득 커뮤니케이션",3],
+  ["소통·리더십","비전중심 목표설정과 실행 리더십",2],
+  ["소통·리더십","상황별 보고 전략과 전달 기술",3],
+  ["소통·리더십","의사결정을 이끄는 보고의 기술",4],
+  ["소통·리더십","일의 품격을 높이는 프로페셔널 셀프리더십",4],
+  ["소통·리더십","자기관리 기반 성과 창출 전략",3],
+  ["소통·리더십","자기주도 업무 수행 기본기",2],
+  ["소통·리더십","전략적 사고 기반 리더십 실행 설계",3],
+  ["소통·리더십","조직의 성과를 만드는 리더십",4],
+  ["소통·리더십","직장 내 소통 역량 강화",2],
+  ["소통·리더십","협업을 위한 갈등관리와 소통의 기술",4],
+  ["소통·리더십","효과적인 업무보고 기본기",2],
+  ["매너·태도","일잘러를 위한 비즈니스 매너",3],
+  ["매너·태도","조직 평판을 높이는 프로의 에티켓",4],
+  ["매너·태도","직장인 기본 매너와 업무 태도",2],
+];
+const FEE = h => h * 40000;          // 연수비 (1인)
+const NET = h => Math.round(FEE(h) * 0.05); // 실부담 (95% 환급)
+const won = n => n.toLocaleString("ko-KR") + "원";
+
+/* ---------- 5개 홍보 주제 ---------- */
+const TOPICS = [
+{
+  no:"TOPIC 01", tag:["위기경영","의사결정","조기경보"], hot:"대표님이 들으신 7강의 확장판",
+  title:"경고음은 언제나 먼저 울립니다<br>— 무너지지 않는 조직의 조건",
+  plain:"경고음은 언제나 먼저 울립니다 — 무너지지 않는 조직의 조건",
+  hook:"위기는 사고가 아니라 신호를 놓친 결과입니다. 보잉·스페이스X·볼티모어 교량 붕괴를 데이터로 뜯어보며, 우리 회사의 경고음을 찾아냅니다.",
+  courses:{2:"비전중심 목표설정과 실행 리더십",3:"전략적 사고 기반 리더십 실행 설계",4:"조직의 성과를 만드는 리더십"},
+  who:"임원·팀장 중심 권장. 대표님과 경영진이 함께 들으실 때 의사결정 기준이 실제로 정렬됩니다.",
+  mods:[
+   [30,"불확실성의 성격이 달라졌습니다","이제는 예측이 아니라 회복 속도가 경쟁력입니다. 잘 버티는 듯 보이다 한 번에 깨지고, 원인과 결과가 비례하지 않는 환경을 어떻게 다룰지 정리합니다. 학계에서는 이를 BANI라 부릅니다.",2],
+   [40,"자동화의 역설과 리더의 방심","오토스로틀을 믿고 수동비행 감각을 잃은 조종실 사고를 복기합니다. 시스템이 좋아질수록 리더의 기술적 낙관이 어떻게 위험이 되는지 봅니다.",2],
+   [45,"보잉 스타라이너 vs 스페이스X 드래건","14년·42억 달러를 쓰고도 해결책을 제시하지 못한 조직과, 신속하게 구조를 실행한 조직. 두 의사결정 구조의 차이를 나란히 놓고 분석합니다.",3],
+   [35,"실패의 3유형 진단","단순 실패·복잡한 실패·지적 실험적 실패를 구분합니다. 체크리스트로 막을 실패와 학습으로만 줄일 수 있는 실패를 섞어 다루는 것이 조직을 지치게 합니다.",3],
+   [40,"위기 리더십 5요소 자가진단","회복탄력성·주의력·적응력·투명성·마음챙김 다섯 축으로 우리 조직의 현재 점수를 매기고, 가장 약한 축부터 손을 댑니다.",4],
+   [30,"우리 회사 조기경보 설계 워크숍","볼티모어 교량 붕괴처럼 경고는 언제나 먼저 옵니다. 우리 회사에서 이미 울리고 있는데 아무도 보고하지 않는 신호를 팀별로 꺼내 목록으로 만듭니다.",4],
+  ],
+  out:["위기 상황에서 경영진이 같은 기준으로 판단하게 됩니다",
+       "실패 보고가 늦어지는 구조적 원인을 찾아냅니다",
+       "우리 회사 조기경보 신호 목록을 손에 들고 나옵니다"]
+},
+{
+  no:"TOPIC 02", tag:["심리적 안전감","팀 성과","구글 연구"], hot:"저서 직강",
+  title:"실패를 감추는 조직 vs<br>학습하는 조직 — 심리적 안전감",
+  plain:"실패를 감추는 조직 vs 학습하는 조직 — 심리적 안전감",
+  hook:"직원들이 나쁜 소식을 늦게 가져오는 회사에는 반드시 이유가 있습니다. 『최고의 팀을 만드는 심리적 안전감』 저자가 그 이유를 진단합니다.",
+  courses:{2:"직장 내 소통 역량 강화",3:"갈등 상황 대응과 설득 커뮤니케이션",4:"조직의 성과를 만드는 리더십"},
+  who:"전 직원 대상 권장. 팀장과 팀원이 같은 자리에서 들을 때 가장 효과가 큽니다.",
+  mods:[
+   [25,"왜 나쁜 소식은 늦게 올라오는가","보고가 늦는 것은 태도 문제가 아니라 확률 계산의 결과입니다. 말했을 때의 손해가 침묵의 손해보다 크면 누구나 침묵합니다.",2],
+   [35,"구글 아리스토텔레스 프로젝트","180개 팀을 분석해 찾아낸 고성과 팀의 5요소(의미·구조·신뢰성·임팩트·심리적 안전감)와, 그중 나머지 넷을 떠받치는 토대가 무엇인지 확인합니다.",2],
+   [30,"에드먼슨 7문항 진단 (현장 실시)","에이미 에드먼슨의 심리적 안전감 7문항을 현장에서 익명으로 실시하고, 우리 팀 점수를 그 자리에서 함께 확인합니다.",2],
+   [40,"마이크로소프트의 팀워크 기술","목적·집합적 아이덴티티·인식 포용·건설적 긴장·신뢰와 취약성. 심리적 안전감을 '분위기'가 아닌 다섯 개의 훈련 가능한 기술로 분해합니다.",3],
+   [45,"실패 프레임 리프레임 워크숍","'실패는 용납 불가, 유능한 직원은 실패하지 않는다'에서 '실패는 도전의 결과, 목표는 학습 증진'으로. 우리 회사의 실제 실패 사례를 익명으로 재해석합니다.",4],
+   [25,"주 1회 실행 약속 만들기","다음 주 회의에서 팀장이 바꿀 문장 한 개씩을 정하고 공유합니다. 큰 선언 대신 작고 확인 가능한 행동으로 끝냅니다.",4],
+  ],
+  out:["우리 팀의 심리적 안전감 점수를 숫자로 확보합니다",
+       "실패 보고가 빨라지는 구체적 회의 규칙을 만듭니다",
+       "팀장이 바꿔야 할 말버릇을 문장 단위로 정리합니다"]
+},
+{
+  no:"TOPIC 03", tag:["MI 코칭 대화법","OARS","동기강화"], hot:"CCCS 인증 과정 기반",
+  title:"지시해도 안 움직이던 직원이<br>스스로 말하게 하는 대화법",
+  plain:"지시해도 안 움직이던 직원이 스스로 말하게 하는 대화법 (MI)",
+  hook:"설득할수록 반대가 세지는 경험, 있으실 겁니다. 40년간 검증된 동기강화면담(MI)은 설득을 멈추고 상대가 스스로 변화를 말하게 만듭니다.",
+  courses:{2:"직장 내 소통 역량 강화",3:"갈등 상황 대응과 설득 커뮤니케이션",4:"협업을 위한 갈등관리와 소통의 기술"},
+  who:"팀장·중간관리자 필수. 면담·평가·이직 만류 대화가 잦은 직책일수록 효과가 큽니다.",
+  mods:[
+   [30,"교정반사 — 좋은 뜻이 만드는 역효과","문제를 바로잡아주려는 본능적 언행이 오히려 상대의 저항을 키웁니다. 리더가 가장 자주 쓰는 여섯 가지 교정반사 문장을 확인합니다.",2],
+   [40,"OARS 기본기","열린 질문(Open)·인정(Affirm)·반영(Reflect)·요약(Summarize). 네 가지 도구를 2인 1조로 즉시 연습합니다.",2],
+   [35,"양가감정은 변화 직전의 신호","'하고는 싶은데 안 된다'는 말은 거절이 아니라 변화 직전 상태입니다. 이 신호를 알아채고 밀지 않는 법을 익힙니다.",3],
+   [35,"변화진술 끌어내기","상대의 입에서 나온 변화 이유만이 실제 행동을 바꿉니다. 리더가 말하는 이유와 직원이 말하는 이유의 효과 차이를 실습으로 비교합니다.",3],
+   [40,"실전 롤플레이 — 성과 면담","저성과자 면담, 지각 반복, 이직 의사 표명. 실제 시나리오로 롤플레이하고 강사가 즉시 피드백합니다.",4],
+   [20,"행동개선보다 관계개선","김현정 박사의 핵심 명제로 마무리합니다. 관계가 열리지 않은 상태에서의 행동 지적은 왜 반복되기만 하는지 정리합니다.",4],
+  ],
+  out:["면담에서 상대의 저항을 키우는 자기 말버릇을 발견합니다",
+       "OARS 네 가지 도구를 실제 대화에서 바로 씁니다",
+       "성과 면담 시나리오를 연습된 상태로 마칩니다"]
+},
+{
+  no:"TOPIC 04", tag:["블루오션 전략","전략캔버스","4액션"], hot:"『블루오션 전략』 역자 직강",
+  title:"경쟁하지 않고 이기는 법<br>— 블루오션 전략 실전 워크숍",
+  plain:"경쟁하지 않고 이기는 법 — 블루오션 전략 실전 워크숍",
+  hook:"『블루오션 전략 확장판』을 우리말로 옮긴 역자가 직접 진행합니다. 이론 소개가 아니라, 우리 회사 전략캔버스를 그려서 나오는 워크숍입니다.",
+  courses:{2:"비전중심 목표설정과 실행 리더십",3:"전략적 사고 기반 리더십 실행 설계",4:"조직의 성과를 만드는 리더십"},
+  who:"경영진·기획·영업 리더 권장. 신사업 검토 시기라면 4시간 과정을 추천드립니다.",
+  mods:[
+   [30,"레드오션의 함정","경쟁사를 이기려는 노력이 왜 수익을 갉아먹는지. 같은 기준으로 싸우는 순간 시장 전체가 가격 경쟁으로 수렴하는 구조를 봅니다.",2],
+   [40,"전략캔버스 읽는 법","우리 산업의 경쟁요소를 가로축에 놓고 그려보면 모든 회사의 곡선이 겹칩니다. 그 겹침이 곧 우리가 차별화하지 못한 지점입니다.",2],
+   [45,"ERRC 4액션 프레임워크","제거(Eliminate)·감소(Reduce)·증가(Raise)·창조(Create). 업계가 당연하게 여기는 요소 중 없애도 되는 것부터 찾습니다.",3],
+   [35,"비고객 3계층 탐색","기존 고객이 아니라 우리를 떠난 고객, 거부한 고객, 아예 고려조차 않은 고객에서 수요가 나옵니다.",3],
+   [45,"우리 회사 전략캔버스 그리기","팀별로 자사 캔버스를 직접 작도하고, 강사가 순회하며 피드백합니다. 결과물을 가지고 나가시게 됩니다.",4],
+   [25,"실행 우선순위 정하기","캔버스에서 도출된 아이디어를 실행 난이도와 임팩트로 배치해 다음 분기에 손댈 한 가지를 정합니다.",4],
+  ],
+  out:["우리 회사 전략캔버스 초안을 손에 들고 나옵니다",
+       "업계 관행 중 제거·감소할 요소를 목록으로 확보합니다",
+       "다음 분기에 실행할 차별화 한 가지가 정해집니다"]
+},
+{
+  no:"TOPIC 05", tag:["가족기업","승계","정신역동"], hot:"2026년 핵심 연구 주제",
+  title:"승계는 기술이 아니라<br>심리의 문제입니다 — 가족기업 심리학",
+  plain:"승계는 기술이 아니라 심리의 문제입니다 — 가족기업 심리학",
+  hook:"지분 구조와 세무는 전문가가 풀어줍니다. 그러나 아버지와 아들이 같은 회의실에서 말이 통하지 않는 문제는 아무도 풀어주지 않습니다.",
+  courses:{2:"직장 내 소통 역량 강화",3:"갈등 상황 대응과 설득 커뮤니케이션",4:"협업을 위한 갈등관리와 소통의 기술"},
+  who:"오너 일가와 핵심 임원이 함께 듣는 것을 강력히 권합니다. 가족만 있는 자리보다 제3자가 있는 자리에서 말이 나옵니다.",
+  mods:[
+   [30,"가족과 기업이 겹칠 때 생기는 일","가족 시스템과 기업 시스템은 작동 원리가 정반대입니다. 두 시스템이 한 사람 안에서 충돌할 때 나타나는 전형적 증상을 정리합니다.",2],
+   [40,"되풀이되는 가족역동","애착·분화·삼각관계. 창업주 세대의 관계 패턴이 왜 다음 세대 회의실에서 그대로 재연되는지 봅니다.",2],
+   [40,"아버지와 아들, 신화로 읽기","경쟁과 계승은 인류가 수천 년간 반복해온 구조입니다. 신화의 서사를 통해 감정을 인신공격이 아닌 구조로 바라보게 합니다.",3],
+   [35,"승계 사례 연구","구찌·에르메스·성심당·삼진어묵. 무너진 승계와 이어진 승계를 갈라놓은 지점을 사례별로 짚습니다.",3],
+   [40,"후계자 준비도 진단","권한 이양의 속도, 임원진의 수용도, 후계자의 자기 서사. 세 축으로 현재 준비 상태를 진단합니다.",4],
+   [25,"승계 대화 설계","다음 대화를 언제, 누구와, 어떤 문장으로 시작할지 각자 한 문장을 적고 마칩니다.",4],
+  ],
+  out:["세대 갈등을 인격 문제가 아닌 구조 문제로 다시 봅니다",
+       "우리 회사의 승계 준비도를 세 축으로 진단합니다",
+       "다음 승계 대화의 첫 문장을 준비해 나갑니다"]
+},
+];
+
+/* ---------- render topic cards ---------- */
+const grid = document.getElementById("topicGrid");
+TOPICS.forEach((t,i)=>{
+  const b = document.createElement("button");
+  b.className = "topic"; b.type = "button"; b.dataset.i = i;
+  b.innerHTML = `<div class="num">${t.no}</div>
+    <h3>${t.title}</h3>
+    <p class="hook">${t.hook}</p>
+    <div class="meta"><span class="chip hot">${t.hot}</span>${t.tag.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
+    <div class="more">2·3·4시간 커리큘럼 보기 →</div>`;
+  grid.appendChild(b);
+});
+
+/* ---------- full course table ---------- */
+document.getElementById("allCourses").innerHTML = COURSES.map(([f,n,h])=>
+  `<tr><td>${f}</td><td>${n}</td><td>${h}시간</td><td class="num">${won(FEE(h))}</td><td class="num hi">${won(NET(h))}</td></tr>`
+).join("");
+
+/* ---------- modal ---------- */
+const ov = document.getElementById("overlay");
+let cur = 0, curH = 3;
+
+function segSet(box, h){
+  box.querySelectorAll(".seg").forEach(s => s.setAttribute("aria-pressed", s.dataset.h === String(h)));
+}
+
+function renderModal(){
+  const t = TOPICS[cur];
+  document.getElementById("mNum").textContent = t.no;
+  document.getElementById("mTitle").innerHTML = t.title;
+  document.getElementById("mHook").textContent = t.hook;
+  document.getElementById("mNet").firstChild.nodeValue = won(NET(curH)) + " ";
+  document.getElementById("mGross").textContent = won(FEE(curH));
+  document.getElementById("mCourse").textContent = t.courses[curH];
+  document.getElementById("mWho").innerHTML = "<b>추천 대상 ·</b> " + t.who
+    + " <b>／ 환급 등록 ·</b> 위 과정명으로 HRD-Net에 등록되며, 강의 내용은 본 커리큘럼대로 진행됩니다.";
+  document.getElementById("mMods").innerHTML = t.mods.map(([min,ti,de,need])=>{
+    const on = need <= curH;
+    return `<li class="${on?"":"off"}"><div class="t">${min}분</div>
+      <div class="c"><b>${ti}${on?"":" · "+need+"시간 과정부터"}</b><span>${de}</span></div></li>`;
+  }).join("");
+  document.getElementById("mOut").innerHTML = t.out.map(o=>`<li>${o}</li>`).join("");
+  segSet(document.getElementById("mTabs"), curH);
+}
+
+function openModal(i){
+  cur = i; renderModal();
+  ov.hidden = false; document.body.style.overflow = "hidden";
+}
+function closeModal(){ ov.hidden = true; document.body.style.overflow = ""; }
+
+grid.addEventListener("click", e => {
+  const b = e.target.closest(".topic"); if (b) openModal(+b.dataset.i);
+});
+document.getElementById("mTabs").addEventListener("click", e => {
+  const s = e.target.closest(".seg"); if (!s) return;
+  curH = +s.dataset.h; renderModal();
+});
+document.getElementById("mClose").onclick = closeModal;
+document.getElementById("mClose2").onclick = closeModal;
+document.getElementById("mApply").onclick = closeModal;
+ov.addEventListener("click", e => { if (e.target === ov) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeModal(); });
+
+/* ---------- calculator ---------- */
+const cTopic = document.getElementById("cTopic");
+cTopic.innerHTML = TOPICS.map((t,i)=>`<option value="${i}">${t.no.replace("TOPIC ","")}. ${t.plain}</option>`).join("");
+const cHours = document.getElementById("cHours");
+const cPeople = document.getElementById("cPeople");
+let calcH = 3;
+
+function calc(){
+  const t = TOPICS[+cTopic.value];
+  const n = Math.max(1, Math.min(500, parseInt(cPeople.value) || 1));
+  const gross = FEE(calcH) * n, net = NET(calcH) * n;
+  document.getElementById("oNet").innerHTML = net.toLocaleString("ko-KR") + "<small>원</small>";
+  document.getElementById("oPer").textContent = `1인당 ${won(NET(calcH))} · ${n}명 기준 · ${calcH}시간`;
+  document.getElementById("oGross").textContent = won(gross);
+  document.getElementById("oRefund").textContent = "− " + won(gross - net);
+  document.getElementById("oCourse").textContent = `${t.courses[calcH]} (${calcH}시간)`;
+}
+cHours.addEventListener("click", e => {
+  const s = e.target.closest(".seg"); if (!s) return;
+  calcH = +s.dataset.h; segSet(cHours, calcH); calc();
+});
+cTopic.addEventListener("change", calc);
+cPeople.addEventListener("input", calc);
+calc();
+
+</script>
+</body>
+</html>
